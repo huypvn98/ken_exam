@@ -9,7 +9,7 @@ services:
     volumes:
       - mongo-data:/var/lib/monogodb/data
     networks:
-      - tedu_exam
+      - ken_exam
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
@@ -23,7 +23,7 @@ services:
     volumes:
       - sqlserver-data:/var/lib/sqlserver/data
     networks:
-      - tedu_exam
+      - ken_exam
     restart: always
     environment:
       ACCEPT_EULA: Y
