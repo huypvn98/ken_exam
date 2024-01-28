@@ -55,9 +55,11 @@ namespace Identity.API
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.Configure<AppSettings>(Configuration);
+
             services.AddIdentityServer(x =>
             {
-                x.IssuerUri = "https://tedu.com.vn";
+                x.IssuerUri = "https://ken.com.vn";
                 x.Authentication.CookieLifetime = TimeSpan.FromHours(2);
             })
             .AddDeveloperSigningCredential()
